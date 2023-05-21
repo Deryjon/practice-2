@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>REST API Practice</title>
+  </head>
+  <body class="bg-gray-100">
+    <main class="container py-7">
+      <header class="">
+        <h1 class="text-3xl font-bold text-center">REST API Practice</h1>
+        <div class="flex justify-center mt-5">
+          <button
+            class="btn bg-emerald-600 text-white px-5 py-3 rounded"
+            onclick="window.open('./src/pages/admin.html', '_self')"
+            id="createProduct"
+          >
+            <i class="fas fa-plus"></i>
+            Create Product
+          </button>
+        </div>
+      </header>
+
+      <div class="product-list mt-7 flex flex-wrap justify-center gap-5">
+        <!-- product item -->
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+
+  </body>
+</html>
