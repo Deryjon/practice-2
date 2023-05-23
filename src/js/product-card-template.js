@@ -1,11 +1,11 @@
-export function productCardTemplate(product, id) {
+export function productCardTemplate(product, key) {
   return `
-    <div id="${id}" class="product-item w-[300px] p-5 bg-white shadow-md rounded">
+    <div class="product-item w-[300px] p-5 bg-white shadow-md rounded" id="${key}">
       <div
         class="product-item__image w-full h-[250px] rounded overflow-hidden"
       >
         <img
-          src="${product.image}}"
+          src="${product.image}"
           alt="${product.name}"
           class="w-full h-full object-cover"
         />
@@ -17,7 +17,7 @@ export function productCardTemplate(product, id) {
           ${product.name}
         </h2>
         <p class="product-item__description text-sm text-gray-400">
-      ${product.description}
+          ${product.description}
         </p>
         <div
           class="product-item__actions flex justify-between items-center"
@@ -27,15 +27,15 @@ export function productCardTemplate(product, id) {
           </div>
           <div class="">
           <button
-					data-key="${key}"
-            class="delete bg-red-800 opacity-90 hover:opacity-100 text-white py-2 px-5 rounded"
+            data-key="${key}"
+            class="btn delete-btn bg-red-800 opacity-90 hover:opacity-100 text-white py-2 px-5 rounded"
           >
             <i class="fas fa-trash pointer-events-none"></i>
           </button>
           <button
             class="btn bg-emerald-800 opacity-90 hover:opacity-100 text-white py-2 px-5 rounded"
           >
-            <i class="fas fa-cart-shopping pointer-events-none"></i>
+            <i class="fas fa-cart-shopping"></i>
           </button>
           </div>
         </div>

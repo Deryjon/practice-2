@@ -1,11 +1,9 @@
 
-const createProductBtn = document.querySelector("#create");
 
-
-const api =
-  "https://to-do-66a0e-default-rtdb.asia-southeast1.firebasedatabase.app/products/iskandar";
-
-	createProductBtn.addEventListener("click", createProduct)
+	const api =
+		"https://to-do-66a0e-default-rtdb.asia-southeast1.firebasedatabase.app/products/iskandar";
+  const createProductBtn = document.querySelector("#create");
+  createProductBtn.addEventListener("click", createProduct);
 
 export async function createProduct(e) {
   e.preventDefault();
@@ -37,5 +35,5 @@ export async function createProduct(e) {
   document.querySelector("#price").value = "";
   document.querySelector("#image").value = "";
   document.querySelector("#description").value = "";
-	window.open("../../index.html", "_self")
+  window.open("../../index.html", "_self");
 }

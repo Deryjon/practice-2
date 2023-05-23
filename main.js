@@ -1,16 +1,16 @@
 import "./src/assets/tailwind.css";
-import { createProduct } from "./src/js/create-product";
-import { fetchProducts } from "./src/js/fetch-products";
 import { deleteProduct } from "./src/js/delete-product";
+import { fetchProducts } from "./src/js/fetch-products";
 
 const productsWrapper = document.querySelector(".product-list");
 
 const api =
   "https://to-do-66a0e-default-rtdb.asia-southeast1.firebasedatabase.app/products/iskandar";
 
+function App() {
+  fetchProducts(api, productsWrapper);
+}
 
 
-// EVENTS
-window.addEventListener("load", fetchProducts);
+window.addEventListener("load", App);
 productsWrapper.addEventListener('click', deleteProduct)
-
