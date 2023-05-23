@@ -6,7 +6,7 @@ export function productCardTemplate(product, id) {
       >
         <img
           src="${product.image}}"
-          alt="product image"
+          alt="${product.name}"
           class="w-full h-full object-cover"
         />
       </div>
@@ -17,16 +17,17 @@ export function productCardTemplate(product, id) {
           ${product.name}
         </h2>
         <p class="product-item__description text-sm text-gray-400">
-      ${product.desc}
+      ${product.description}
         </p>
         <div
           class="product-item__actions flex justify-between items-center"
         >
           <div class="product-item__price text-xs text-blue-600 my-3">
-            Price: <span class="font-bold text-xl">${product.price}</span>
+            Price: <span class="font-bold text-xl">$${product.price}</span>
           </div>
           <div class="">
           <button
+					data-key="${key}"
             class="delete bg-red-800 opacity-90 hover:opacity-100 text-white py-2 px-5 rounded"
           >
             <i class="fas fa-trash pointer-events-none"></i>
